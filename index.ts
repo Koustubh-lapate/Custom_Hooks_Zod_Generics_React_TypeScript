@@ -32,4 +32,17 @@ function getFirstElement(arr: (number | string)[]){
 }
 
 let ans1 = getFirstElement([1, 2, 3]);
-let ans2 = getFirstElement([])
+let ans2 = getFirstElement(["one", "two", "three"]);
+
+//ans2.toLowerCase();
+//Property toLowerCase doesn't exists on type number | string.
+
+//Solution - Using Generics
+function getFirstElementGen<T>(arr: T[]): T{
+    return arr[0];
+}
+
+let answer1 = getFirstElementGen([1, 2, 3]);
+let answer2 = getFirstElementGen(["one", "two", "three"]);
+
+answer2.toLowerCase() //T type
