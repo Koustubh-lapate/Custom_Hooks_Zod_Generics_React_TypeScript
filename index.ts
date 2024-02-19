@@ -46,3 +46,33 @@ let answer1 = getFirstElementGen([1, 2, 3]);
 let answer2 = getFirstElementGen(["one", "two", "three"]);
 
 answer2.toLowerCase() //T type
+
+//Swapper function
+function swap<T>(a: T, b: T): [T, T] {
+    return [b, a];
+}
+
+//Zod
+//It is used for backend validation. Bunch of checks on the data sent by the client to server, if it is not correct can break your server.
+
+/*
+import {z} from "zod";
+
+let titleInputProps = z.object({
+    title: z.string().min(1),
+    description: z.string().min(1)
+})
+
+router.post('/todos', authenticateJwt, (req, res) => {
+    const parsedInput = titleInputProps.safeParse(req.body);
+    if(!parsedInput.success){
+        return res.status(411).json({
+            msg: parsedInput.error
+        })
+    }
+
+    let title = parsedInput.data.title;
+    let description = parsedInput.data.description;
+})
+*/
+
