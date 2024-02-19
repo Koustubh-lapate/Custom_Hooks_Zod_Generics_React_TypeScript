@@ -25,3 +25,11 @@ function getFirstElementMethod3(arr: (number | string)[]): (number | string){
     return arr[0];
 }
 
+//Problem
+
+function getFirstElement(arr: (number | string)[]){
+    return arr[0];
+}
+
+let ans1 = getFirstElement([1, 2, 3]);
+let ans2 = getFirstElement([])
