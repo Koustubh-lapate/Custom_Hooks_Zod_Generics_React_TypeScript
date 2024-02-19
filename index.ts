@@ -76,3 +76,31 @@ router.post('/todos', authenticateJwt, (req, res) => {
 })
 */
 
+//Custom hooks in react
+
+/*
+hook, swr, useSwr
+function useTodos() {
+    const [todos, setTodos] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const getTodos = async () => {
+            const response = await fetch('http://localhost:3000/todo/todos', {
+                headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
+            });
+            // Todo: Create a type for the response that you get back from the server
+            const data = await response.json();
+            setTodos(data);
+            setLoading(false);
+        };
+        getTodos();
+    }, []);
+
+    return {
+        loading,
+        todos: todos,
+        setTodos
+    }
+}
+*/
